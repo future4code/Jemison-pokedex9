@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-Allef Souza 
-Alex Silva
-Huan Silva Lima
+- Allef Souza 
+- Alex Silva 
+- Huan Silva Lima
 
 Link do Surge: www.link.com.br
 
