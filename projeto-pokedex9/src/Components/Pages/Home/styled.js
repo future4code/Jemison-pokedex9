@@ -2,10 +2,12 @@ import styled from "styled-components";
 import IMG from './Background.jpg'
 
 export const Div = styled.div `
-
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   background-image: url(${IMG});
+  position: relative;
+  overflow: auto;
   height: 100vh;
   
 `

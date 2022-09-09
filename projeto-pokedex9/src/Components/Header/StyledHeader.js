@@ -2,8 +2,15 @@ import styled from "styled-components";
 
 export const Headers = styled.header `
     display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0px;
     height: 8vh;
     width: 100%;
+    flex-shrink: 0;
+    z-index: 1100;
+    left: auto;
+    right: 0px;
     padding: 0 16px;
     align-items: center;
     justify-content: space-between;

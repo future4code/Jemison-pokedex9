@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import CardPokemon from '../../CardPokemon/CardPokemon'
 import Header from '../../Header/Header'
 import {Div} from '../Home/styled'
 import TextImage from './textPokédex.png'
 import { Button } from '../Home/styled'
 import { useNavigate } from 'react-router-dom'
-
+import useRequestData from '../../Hooks/Hooks'
+import {BASE_URL} from '../../Hooks/base_url'
 
 
 function Home() {
-  const [pokemons, setPokemons] = useState()
+  const data = useRequestData(`${BASE_URL}pokemon/`)
 
   const navigate = useNavigate()
   const Back = () => {
@@ -35,7 +36,10 @@ function Home() {
         >MY POKEDEX</Button>
       }
       />
-      <CardPokemon/>
+      {data && data.results && data.results.map((pokemon) =>{
+        return <CardPokemon key={pokemon.name} pokemon={pokemon}/>
+      })}
+      
     </Div>
   )
 }
