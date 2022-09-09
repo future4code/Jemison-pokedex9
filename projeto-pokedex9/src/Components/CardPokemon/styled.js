@@ -15,7 +15,12 @@ export const CardContainer = styled.div`
     backdrop-filter: blur( 12.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-`;
+
+    :hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    }
+    
+`
 
 export const PokeImage = styled.img`
     width: 100%;
@@ -30,11 +35,28 @@ export const TextContainer = styled.div`
     height: 40px;
     padding: 10px;
     width: 100%;
+
   
-`;
+`
 
 export const NameText = styled.h2`
     margin: 10px;
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
-`;
+`
+
+export const Button = styled.button `
+    font-family: 'Press Start 2P', cursive;
+    background: rgba( 255, 255, 255, 0.0 );
+    cursor: pointer;
+    padding: 5px;
+    width: 180px;
+    margin-bottom: 5px;
+
+    :hover {
+        background: #ffcc03;
+        border-color: #2083F8;
+        color: #2083F8;
+    }
+
+`

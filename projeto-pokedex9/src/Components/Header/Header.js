@@ -1,11 +1,20 @@
 import React from 'react'
-import { Headers } from './StyledHeader'
-import textPokédex from './textPokédex.png'
+import { Headers, Center, Start, End } from './StyledHeader'
 
-function Header() {
+
+
+function Header(props) {
   return (
     <Headers>
-      <img src={textPokédex} alt="Pokédex" />
+      <Start>
+        <div>{props.button}</div>
+      </Start>
+      <Center>
+        <img src={props.image} />
+      </Center> 
+      <End>
+        <div>{props.button2}</div>
+      </End>
     </Headers>
   )
 }
