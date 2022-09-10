@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardContainer, PokeImage, TextContainer, NameText, Button } from './styled'
+
 import useRequestData from '../Hooks/Hooks';
 import { BASE_URL } from '../Hooks/base_url';
 
@@ -8,6 +9,16 @@ function CardPokemon({pokemon}) {
   const data = useRequestData(`${BASE_URL}pokemon/${pokemon.name}/`);
   
   data && console.log(data)
+
+
+import { useNavigate } from 'react-router-dom'
+
+function CardPokemon({pokemon, }) {
+  const navigate = useNavigate()
+  const goDetails = () => {
+    navigate("/details" )
+  }
+ 
 
   return (
     <CardContainer>
@@ -18,8 +29,8 @@ function CardPokemon({pokemon}) {
         <TextContainer>
             <NameText>{pokemon.name}</NameText>
         </TextContainer>
-        <Button>adicionar</Button>
-        <Button>detalhes</Button>   
+        <Button onClick={()=>{}}>adicionar</Button>
+        <Button onClick={goDetails}>detalhes</Button>   
 
     </CardContainer>
   )
