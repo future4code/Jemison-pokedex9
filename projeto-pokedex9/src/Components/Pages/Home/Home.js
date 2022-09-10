@@ -10,8 +10,7 @@ import {BASE_URL} from '../../Hooks/base_url'
 
 
 function Home() {
-  const data = useRequestData(`${BASE_URL}pokemon/`)
-
+  const data = useRequestData(`${BASE_URL}pokemon?limit=20`)
   const navigate = useNavigate()
   const Back = () => {
     navigate(-1)

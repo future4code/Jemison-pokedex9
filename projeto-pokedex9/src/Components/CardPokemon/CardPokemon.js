@@ -1,14 +1,19 @@
 import React from 'react'
 import { CardContainer, PokeImage, TextContainer, NameText, Button } from './styled'
+import useRequestData from '../Hooks/Hooks';
+import { BASE_URL } from '../Hooks/base_url';
 
+function CardPokemon({pokemon}) {
+  
+  const data = useRequestData(`${BASE_URL}pokemon/${pokemon.name}/`);
+  
+  data && console.log(data)
 
-function CardPokemon({pokemon, }) {
   return (
     <CardContainer>
         <PokeImage
-            img
-            alt={pokemon.name}
-            src={pokemon.front_default}
+            alt={data.name}
+            src={data && data.sprites.front_default}
         />
         <TextContainer>
             <NameText>{pokemon.name}</NameText>
