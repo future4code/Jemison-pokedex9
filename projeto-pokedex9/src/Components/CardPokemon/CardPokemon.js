@@ -1,8 +1,13 @@
 import React from 'react'
 import { CardContainer, PokeImage, TextContainer, NameText, Button } from './styled'
-
+import { useNavigate } from 'react-router-dom'
 
 function CardPokemon({pokemon, }) {
+  const navigate = useNavigate()
+  const goDetails = () => {
+    navigate("/details" )
+  }
+ 
   return (
     <CardContainer>
         <PokeImage
@@ -13,8 +18,8 @@ function CardPokemon({pokemon, }) {
         <TextContainer>
             <NameText>{pokemon.name}</NameText>
         </TextContainer>
-        <Button>adicionar</Button>
-        <Button>detalhes</Button>   
+        <Button onClick={()=>{}}>adicionar</Button>
+        <Button onClick={goDetails}>detalhes</Button>   
 
     </CardContainer>
   )
