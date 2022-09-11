@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Alex Silva 
 - Huan Silva Lima
 
-Link do Surge: serious-dad.surge.sh
+Link do Surge:  idiotic-line.surge.sh  ( ultimo link com responsividade e render da pic do pokemon nos detalhes)
 
 O que funciona:
 - Item 1
