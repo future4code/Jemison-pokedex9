@@ -4,6 +4,16 @@ import Header from '../../Header/Header'
 import Details from './Details.png'
 import { Button } from './styled'
 import { useNavigate } from 'react-router-dom'
+import { 
+  ContainerDivs, 
+  ContainerIMG, 
+  ContainerStats, 
+  ContainerTypesMoves, 
+  FrontIMG, 
+  BackIMG, 
+  Types, 
+  Moves, 
+  Stats} from './styled'
 
 function DetalheDePokemon() {
   const navigate = useNavigate()
@@ -24,6 +34,31 @@ function DetalheDePokemon() {
             >HOME</Button>
         }
         />
+        <ContainerDivs>
+          <ContainerIMG>
+            <FrontIMG>
+
+            </FrontIMG>
+            <BackIMG>
+
+            </BackIMG>
+          </ContainerIMG>
+          <ContainerStats>
+              <Stats>
+
+              </Stats>
+          </ContainerStats>
+          <ContainerTypesMoves>
+              <Types>
+
+              </Types>
+              <Moves>
+
+              </Moves>
+          </ContainerTypesMoves>
+
+
+        </ContainerDivs>
     </Div>
   )
 }
